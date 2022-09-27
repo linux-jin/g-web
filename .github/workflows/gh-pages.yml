@@ -19,7 +19,8 @@ jobs:
 
       - run: |
           [ $BASE_PATH ] || BASE_PATH="/${REPO_NAME}"
-          [ "$BASE_PATH" != "/g-web" ] && sed -i "s|/g-web|$BASE_PATH|g" package.json
+          [ "$BASE_PATH" != "/g-web" ] && sed -i "s|/g-web|$BASE_PATH|g" apps/demo/src/package.json
+
       - run: node common/scripts/install-run-rush.js install
       - run: node common/scripts/install-run-rush.js rebuild --verbose
 
