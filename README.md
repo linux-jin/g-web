@@ -1,4 +1,4 @@
-# G-Web 
+# G-Web
 
 A Logitech™ device manager in browsers. It uses WebHID API to interact with devices connected via USB (corded or through receivers) or Bluetooth.
 
