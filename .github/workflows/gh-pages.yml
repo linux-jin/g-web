@@ -16,10 +16,10 @@ jobs:
           node-version: 14.x
         env:
           BASE_PATH: ${{ secrets.BASE_PATH }}
-        run: |
+
+      - run: |
           [ $BASE_PATH ] || BASE_PATH="/${REPO_NAME}"
           [ "$BASE_PATH" != "/g-web" ] && sed -i "s|/g-web|$BASE_PATH|g" package.json
-
       - run: node common/scripts/install-run-rush.js install
       - run: node common/scripts/install-run-rush.js rebuild --verbose
 
