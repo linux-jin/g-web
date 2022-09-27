@@ -15,6 +15,7 @@ jobs:
         with:
           node-version: 14.x
         env:
+          REPO_NAME: ${{ github.event.repository.name }}
           BASE_PATH: ${{ secrets.BASE_PATH }}
 
       - run: |
